@@ -1,0 +1,31 @@
+.nav-box1 {
+    background-color: rgb(227, 239, 237);
+    color: black;
+    padding: 5px;
+    margin: 0 25px;
+    border-radius: 4px;
+    display: inline-block;
+  }
+  
+  
+  .navbar-heading1 {
+    display: flex;
+   
+    color: black;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 5;
+  }
+  /* .navbar-heading1{
+    box-shadow: 8px 8px 10px 5px rgba(185, 185, 185, 0.938);
+  
+  } */
+  /* h2{
+    font-family: 'Times New Roman', Times, serif;
+    
+    background-color: rgba(193, 223, 222, 0.985);
+    border-radius: 16px;
+    box-shadow: 8px 8px 10px 5px rgba(1, 0, 0, 0.2);
+  } */
+  
+  

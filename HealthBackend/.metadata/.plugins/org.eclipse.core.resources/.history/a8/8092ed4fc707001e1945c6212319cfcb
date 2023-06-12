@@ -1,0 +1,17 @@
+package com.healthJunction.dto;
+
+import com.healthJunction.entities.User;
+
+public class MedicineDetailsDto {
+
+	private String name;
+	
+	private String dosage;
+
+	private String schedule;
+
+	private String reminders;
+
+	
+	private User user;
+}

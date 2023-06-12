@@ -1,0 +1,33 @@
+package com.healthJunction.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Setter
+@Getter
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
+public class ExerciseAddDto {
+
+	private String name;
+	
+	private String description;
+	
+	private String defficultyLevel;
+	
+	private String user;
+	
+	public ExerciseAddDto(String name, String description, String difficultyLevel, String user) {
+		this.name = name;
+		this.description = description;
+		this.defficultyLevel = difficultyLevel;
+		this.user = user;
+	}
+
+	
+
+}

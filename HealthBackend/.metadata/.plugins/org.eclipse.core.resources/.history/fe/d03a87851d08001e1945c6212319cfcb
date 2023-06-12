@@ -1,0 +1,56 @@
+package com.healthJunction.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import com.healthJunction.dto.ExerciseAddDto;
+import com.healthJunction.entities.Exercise;
+
+@Repository
+public interface ExerciseRepository extends JpaRepository<Exercise, Integer> {
+
+	package com.healthJunction.entities;
+
+	import javax.persistence.Entity;
+	import javax.persistence.Id;
+	import javax.validation.constraints.Email;
+	import javax.validation.constraints.NotBlank;
+
+	import lombok.AllArgsConstructor;
+	import lombok.Getter;
+	import lombok.NoArgsConstructor;
+	import lombok.Setter;
+	import lombok.ToString;
+
+	@Entity
+	@Getter
+	@Setter
+	@ToString
+	@AllArgsConstructor
+	@NoArgsConstructor
+	public class User {
+
+		@Id
+		@Email
+		private String loginId;
+
+		@NotBlank
+		private String password;
+		@NotBlank
+		private String firstName;
+
+		@NotBlank
+		private String lastName;
+
+		@NotBlank
+		private String age;
+
+	}
+
+//	@Query("SELECT NEW com.healthJunction.dto.ExerciseAddDto(e.name as name, e.description as description, e.defficultyLevel as defficultyLevel , e.loginId as user)FROM Exercise e left join e.User u WHERE e.loginId = ?1")
+//	List<ExerciseAddDto> getAllExercise(String id);
+//@Query("SELECT NEW com.healthJunction.dto.HealthDataDto(e.date as date , e.steps as steps, e.heartRate as heartRate, e.bloodPressure as bloodPressure, e.loginId as user)FROM HealthData e left join e.User u  WHERE e.login_id = ?1")
+}

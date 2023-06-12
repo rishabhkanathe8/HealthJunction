@@ -1,0 +1,78 @@
+package com.healthJunction.controller;
+
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.healthJunction.dto.AuthDto;
+import com.healthJunction.entities.User;
+import com.healthJunction.service.UserService;
+
+@RestController
+@RequestMapping("/user")
+@CrossOrigin(origins = "http://localhost:3000")
+public class UserController {
+
+	@Autowired
+	private UserService userService;
+	
+	@PostMapping("/login")
+	private ResponseEntity<User> loginUser( @Valid @RequestBody AuthDto authDto){
+		User user = userService.loginAgent(authDto);
+		if (user != null) {
+			return new ResponseEntity<>(user, HttpStatus.OK);
+		} else {
+			return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
+		}
+	}
+
+	@PostMapping("/add")
+	private ResponseEntity<User> saveUser(@RequestBody @Valid User user) {
+
+		User newUser = userService.addUser(user);
+		if (newUser != null) {
+			return new ResponseEntity<>(newUser, HttpStatus.CREATED);
+		} else {
+			return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
+		}
+	}
+
+	@GetMapping("/{id}")
+	public ResponseEntity<User> getUserById(@PathVariable("id") String id) {
+		User existingUser = userService.getUser(id);
+		if (existingUser != null) {
+			return new ResponseEntity<>(existingUser, HttpStatus.OK);
+		} else {
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		}
+	}
+
+	@DeleteMapping("/{id}")
+	public ResponseEntity<Void> deleteUser(@PathVariable("id") String id) {
+		userService.deleteUser(id);
+		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+	}
+
+	@PutMapping("/{id}")
+	public ResponseEntity<User> updateUserFromDb(@PathVariable("id") String id, @Valid @RequestBody User user) {
+
+		User getUser = userService.updateUser(id, user);
+		if (getUser != null) {
+			return new ResponseEntity<>(getUser, HttpStatus.OK);
+		} else {
+			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+		}
+	}
+
+}

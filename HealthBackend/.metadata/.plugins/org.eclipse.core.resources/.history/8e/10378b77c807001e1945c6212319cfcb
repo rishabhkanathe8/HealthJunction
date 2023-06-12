@@ -1,0 +1,39 @@
+package com.healthJunction.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.healthJunction.dto.MedicineDetailsDto;
+import com.healthJunction.entities.HealthData;
+import com.healthJunction.entities.User;
+import com.healthJunction.repository.MedicineDetailsRepository;
+
+public class MedicineDetailsServiceImpl implements MedicineDetailsService {
+
+	@Autowired
+	MedicineDetailsRepository medicineDetailsRepository;
+	
+
+	@Autowired
+	UserService userService;
+	@Override
+	public void addMedicineDetails(MedicineDetailsDto MedicineDetailsDto) {
+		HealthData newHealthData = new HealthData();
+		User user = healthDataDto.getUser() != null ? userService.getUser(healthDataDto.getUser()) : null;
+		newHealthData.setUser(user);
+		newHealthData.setBloodPressure(healthDataDto.getBloodPressure());
+		newHealthData.setDate(healthDataDto.getDate());
+		newHealthData.setHeartRate(healthDataDto.getHeartRate());
+		newHealthData.setSteps(healthDataDto.getSteps());
+		healthDataRepository.save(newHealthData);
+
+	}
+
+	@Override
+	public List<MedicineDetailsDto> getAllMedicineDetailsDto(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.healthJunction.controller;
+
+public class HealthDataController {
+
+}

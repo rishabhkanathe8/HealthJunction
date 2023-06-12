@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=HealthJunction/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.healthJunction.service{UserService.java[UserService" modifiers="513" timestamp="1686397717732"/>
+    <typeInfo handle="=HealthJunction/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.healthJunction.service{ExerciseService.java[ExerciseService" modifiers="513" timestamp="1686462891852"/>
+    <typeInfo handle="=HealthJunction/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.healthJunction.service{HealthDataService.java[HealthDataService" modifiers="513" timestamp="1686462007118"/>
+    <typeInfo handle="=HealthJunction/C:\/Users\/4340\/.m2\/repository\/org\/springframework\/data\/spring-data-jpa\/2.7.12\/spring-data-jpa-2.7.12.jar=/maven.pomderived=/true=/=/maven.pomderived=/true=/=/maven.groupId=/org.springframework.data=/=/maven.artifactId=/spring-data-jpa=/=/maven.version=/2.7.12=/=/maven.scope=/compile=/&lt;org.springframework.data.jpa.repository(JpaRepository.class[JpaRepository" modifiers="1537" timestamp="1684736851093"/>
+    <typeInfo handle="=HealthJunction/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.healthJunction.service{MedicineDetailsService.java[MedicineDetailsService" modifiers="513" timestamp="1686464086387"/>
+</typeInfoHistroy>

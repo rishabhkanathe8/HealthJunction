@@ -1,0 +1,31 @@
+package com.healthJunction.service;
+
+import com.healthJunction.entities.Exercise;
+
+public class ExerciseServiceImpl implements ExerciseService {
+
+	@Override
+	public Exercise addExercise(Exercise exercise) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteExercise(String id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Exercise getExercise(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Exercise updateExercise(String id, Exercise exercise) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

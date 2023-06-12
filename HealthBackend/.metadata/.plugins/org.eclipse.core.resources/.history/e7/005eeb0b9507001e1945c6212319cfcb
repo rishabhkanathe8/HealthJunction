@@ -1,0 +1,43 @@
+package com.healthJunction.service;
+
+import java.util.List;
+
+import com.healthJunction.dto.ExerciseAddDto;
+import com.healthJunction.entities.Exercise;
+
+public class ExerciseServiceImpl implements ExerciseService {
+
+	@Override
+	public void addExercise(ExerciseAddDto exerciseAddDto) {
+		Exercise newExercise = new Exercise();
+		User user = 
+		
+	}
+
+	@Override
+	public void deleteExercise(String id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Exercise getExercise(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Exercise updateExercise(String id, Exercise exercise) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Exercise> getAllTour(Exercise exercise) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+
+}

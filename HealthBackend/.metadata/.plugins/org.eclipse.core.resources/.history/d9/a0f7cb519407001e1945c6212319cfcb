@@ -1,0 +1,22 @@
+package com.healthJunction.dto;
+
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.validation.constraints.NotBlank;
+
+import com.healthJunction.entities.User;
+
+public class ExerciseAddDto {
+
+	
+
+	
+	private String name;
+	
+	private String description;
+	
+	private String defficultyLevel;
+	
+	private String user;
+
+}

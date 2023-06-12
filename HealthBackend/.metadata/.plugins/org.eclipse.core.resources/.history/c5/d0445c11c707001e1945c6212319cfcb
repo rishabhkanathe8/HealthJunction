@@ -1,0 +1,8 @@
+package com.healthJunction.repository;
+
+@Repository
+import org.springframework.data.jpa.repository.JpaRepository;ository;
+
+public interface MedicineDetails extends JpaRepository<MedicineDetails, Integer> {
+
+}

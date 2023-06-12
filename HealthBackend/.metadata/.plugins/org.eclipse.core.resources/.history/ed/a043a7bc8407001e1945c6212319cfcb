@@ -1,0 +1,8 @@
+package com.healthJunction.service;
+
+
+public interface UserService {
+	
+	
+
+}

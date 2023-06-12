@@ -1,0 +1,16 @@
+package com.healthJunction.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import com.healthJunction.dto.MedicineDetailsDto;
+import com.healthJunction.entities.MedicineDetails;
+@Repository
+public interface MedicineDetailsRepository extends JpaRepository<MedicineDetails, Integer> {
+
+	@Query("SELECT NEW com.healthJunction.dto.MedicineDetailsDto(e.name, e.dosage, e.schedule, e.reminders, e.user)FROM MedicineDetails e WHERE e.id = :id")
+	List<MedicineDetailsDto> getAllMedicineDetails(String id);
+}

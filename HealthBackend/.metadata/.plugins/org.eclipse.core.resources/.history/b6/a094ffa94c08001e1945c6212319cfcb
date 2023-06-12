@@ -1,0 +1,22 @@
+package com.healthJunction.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+
+import com.healthJunction.dto.ExerciseAddDto;
+import com.healthJunction.entities.Exercise;
+
+@Repository
+public interface ExerciseRepository extends JpaRepository<Exercise, Integer> {
+
+	
+	
+	 @Query("SELECT NEW com.healthJunction.dto.ExerciseAddDto(e.name as name, e.description as description, e.defficultyLevel as defficultyLevel, e.user.loginId as user) FROM Exercise e WHERE e.user.loginId = ?1")
+	    List<ExerciseAddDto> getAllExercisesByLoginId(@Param("loginId") String loginId);
+
+//@Query("select new com.toureasy.dto.TourDetailsDto(t.source as source, t.destination as destination, t.price as price, t.dateTime as date, a.companyName as companyName,  a.mobileNo as mobileNo) from Tour t left join t.agent a where t.source = ?1 and t.destination = ?2 ")
+}

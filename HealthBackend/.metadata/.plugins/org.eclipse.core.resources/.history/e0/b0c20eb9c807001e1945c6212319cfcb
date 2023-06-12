@@ -1,0 +1,31 @@
+package com.healthJunction.dto;
+
+import javax.persistence.Entity;
+
+import com.healthJunction.entities.User;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Entity
+@Getter
+@Setter
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
+public class MedicineDetailsDto {
+
+	private String name;
+	
+	private String dosage;
+
+	private String schedule;
+
+	private String reminders;
+
+	
+	private User user;
+}

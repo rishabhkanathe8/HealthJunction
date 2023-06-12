@@ -1,0 +1,52 @@
+package com.healthJunction.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.healthJunction.dto.ExerciseAddDto;
+import com.healthJunction.entities.Exercise;
+import com.healthJunction.entities.User;
+import com.healthJunction.repository.ExerciseRepository;
+
+public class ExerciseServiceImpl implements ExerciseService {
+
+	@Autowired
+	UserService userService;
+
+	@Autowired
+	ExerciseRepository exerciseRepository;
+
+	@Override
+	public void addExercise(ExerciseAddDto exerciseAddDto) {
+		Exercise newExercise = new Exercise();
+		User user = exerciseAddDto.getUser() != null ? userService.getUser(exerciseAddDto.getUser()) : null;
+		newExercise.setUser(user);
+		newExercise.setDefficultyLevel(exerciseAddDto.getDefficultyLevel());
+		newExercise.setDescription(exerciseAddDto.getDescription());
+		newExercise.setName(exerciseAddDto.getName());
+		exerciseRepository.save(newExercise);
+
+	}
+
+	@Override
+	public void deleteExercise(String id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	
+
+	@Override
+	public Exercise updateExercise(String id, Exercise exercise) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ExerciseAddDto> getAllTour(String id) {
+		//List<ExerciseAddDto> list= exerciseRepository.fin
+		return null;
+	}
+
+}

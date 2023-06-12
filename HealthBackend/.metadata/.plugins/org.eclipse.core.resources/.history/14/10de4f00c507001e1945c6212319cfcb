@@ -1,0 +1,33 @@
+package com.healthJunction.service;
+
+import java.util.List;
+
+import com.healthJunction.dto.HealthDataDto;
+
+public class HealthDataServiceImpl implements HealthDataService {
+
+	@Override
+	public void addExercise(HealthDataDto healthDataDto) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void deletehealthData(int id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public HealthDataDto updatehealthData(int id, HealthDataDto healthDataDto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<HealthDataDto> getAllhealthData(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

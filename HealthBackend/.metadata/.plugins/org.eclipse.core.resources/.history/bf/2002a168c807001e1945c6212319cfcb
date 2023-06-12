@@ -1,0 +1,21 @@
+package com.healthJunction.service;
+
+import java.util.List;
+
+import com.healthJunction.dto.MedicineDetailsDto;
+
+public class MedicineDetailsServiceImpl implements MedicineDetailsService {
+
+	@Override
+	public void addMedicineDetails(MedicineDetailsDto MedicineDetailsDto) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<MedicineDetailsDto> getAllMedicineDetailsDto(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

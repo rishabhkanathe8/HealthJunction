@@ -1,0 +1,15 @@
+package com.healthJunction.service;
+
+import com.healthJunction.entities.Excercise;
+
+public interface ExerciseService {
+
+	public Excercise addExcercise(Excercise excercise);
+
+	public void deleteExcercise(String id);
+
+	public Excercise getExcercise(String id);
+
+	public Excercise updateExcercise(String id, Excercise excercise);
+	
+}

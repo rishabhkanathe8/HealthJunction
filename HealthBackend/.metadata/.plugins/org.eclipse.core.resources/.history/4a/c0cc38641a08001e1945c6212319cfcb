@@ -1,0 +1,15 @@
+package com.healthJunction.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.healthJunction.dto.HealthDataDto;
+import com.healthJunction.entities.HealthData;
+
+public interface HealthDataRepository extends JpaRepository<HealthData, Integer>{
+
+	@Query("SELECT NEW com.healthJunction.dto.HealthDataDto(e.date, e.steps, e.heartRate, e.bloodPressure, e.user)FROM HealthData e WHERE e.id = :id")
+	List<HealthDataDto> getAllHealthData(int id);
+}

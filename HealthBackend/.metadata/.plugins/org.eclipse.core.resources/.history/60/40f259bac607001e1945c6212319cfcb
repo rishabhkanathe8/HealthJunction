@@ -1,0 +1,32 @@
+package com.healthJunction.dto;
+
+import java.time.LocalDate;
+
+import com.healthJunction.entities.User;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Setter
+@Getter
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
+public class HealthDataDto {
+	
+	
+	private LocalDate date;
+
+	private String steps;
+	
+	private String heartRate;
+	
+	private String bloodPressure;
+	
+
+	private String user;
+
+}

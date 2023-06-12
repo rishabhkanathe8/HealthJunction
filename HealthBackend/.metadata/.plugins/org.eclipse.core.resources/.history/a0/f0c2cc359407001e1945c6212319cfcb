@@ -1,0 +1,5 @@
+package com.healthJunction.dto;
+
+public class ExerciseAddDto {
+
+}

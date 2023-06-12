@@ -1,0 +1,45 @@
+
+.background-images {
+  position: absolute;
+  top: 0;
+ 
+  width: 100%;
+  height: 100%;
+  background-image: url('https://media.istockphoto.com/id/1290220631/photo/human-heart-with-ecg-graph.jpg?s=612x612&w=0&k=20&c=9zjykrI4sBRluNkHkaFFs-Vg9JkjtMWJxqsfzl2Hgo4=');
+  background-size: cover;
+  filter: brightness(0.5);
+  z-index: -5;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.nav-box {
+    background-color: rgb(146, 146, 212);
+    color: black;
+    padding: 10px;
+    margin: 0 25px;
+    border-radius: 8px;
+    display: inline-block;
+  }
+  
+  
+  .navbar-heading {
+    display: flex;
+   
+    color: black;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+  .navbar-heading{
+    box-shadow: 8px 8px 10px 5px rgba(143, 203, 137, 0.938);
+  
+  }
+  h1{
+    font-family: 'Times New Roman', Times, serif;
+    /* box-shadow: 0.0px 0.0px 0.5px 0.5px; */
+    background-color: rgba(193, 223, 222, 0.985);
+    border-radius: 16px;
+    box-shadow: 8px 8px 10px 5px rgba(1, 0, 0, 0.2);
+  }
+  
+  
